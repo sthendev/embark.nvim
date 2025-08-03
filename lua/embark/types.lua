@@ -1,0 +1,2 @@
+---@alias Highlights { [string]: vim.api.keyset.highlight }
+---@alias HighlightsFn fun(c: ColorPalette): Highlights

@@ -1,10 +1,7 @@
 local M = {}
 
 M.groups = {
-    ["base"] = true,
-    ["kinds"] = true,
-    ["semantic"] = true,
-    ["treesitter"] = true,
+    ["editor"] = true,
 }
 
 M.plugins = {}

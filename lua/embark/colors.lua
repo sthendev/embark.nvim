@@ -1,7 +1,7 @@
 local M = {}
 
----@class Colors
-M.colors = {
+---@class BaseColors
+M.COLORS = {
     -- Space Colors:
     dark0       = "#100E23",
     dark1       = "#1E1C31",
@@ -28,8 +28,19 @@ M.colors = {
     cyan1       = "#ABF8F7",
 }
 
+---@class ColorPalette : BaseColors
+M.ALIASES = {
+    fg          = M.COLORS.light1,
+    bg          = M.COLORS.dark1,
+    error       = M.COLORS.red1,
+    warning     = M.COLORS.yellow1,
+    border      = M.COLORS.dark3,
+    highlight   = M.COLORS.dark3,
+}
+
 function M.setup()
-    return M.colors
+    ---@type ColorPalette
+    return vim.tbl_extend("keep", M.COLORS, M.ALIASES)
 end
 
 return M
