@@ -22,13 +22,13 @@ function M.get(c)
             -- screen-line at the cursor when cursorline=true
         Directory           = { fg = c.yellow0 },
             -- directory names
-        DiffAdd             = { bg = Utils.blend(c.added, c.dark0, 0.5) },
+        DiffAdd             = { bg = Utils.blend(c.added, c.dark0, 0.7) },
             -- diff mode: added line
-        DiffChange          = { bg = Utils.blend(c.changed, c.dark0, 0.5) },
+        DiffChange          = { bg = Utils.blend(c.changed, c.dark0, 0.7) },
             -- diff mode: changed line
-        DiffDelete          = { bg = Utils.blend(c.deleted, c.dark0, 0.5) },
+        DiffDelete          = { bg = Utils.blend(c.deleted, c.dark0, 0.7) },
             -- diff mode: deleted line
-        DiffText            = { bg = c.suggestion },
+        DiffText            = { bg = c.info },
             -- diff mode: changed text within changed line
         EndOfBuffer         = { link = "LineNrBelow" },
             -- filler lines (~) after the last line in the buffer
@@ -40,13 +40,13 @@ function M.get(c)
             -- warning messages
         WinSeparator        = { fg = c.border },
             -- separators between window splits
-        Folded              = { fg = c.suggestion, bg = c.highlight },
+        Folded              = { fg = c.info, bg = c.highlight },
             -- line used for closed folds
-        FoldColumn          = { fg = c.suggestion },
+        FoldColumn          = { fg = c.info },
             -- 'foldcolumn'
-        SignColumn          = { fg = c.yellow0 },
+        SignColumn          = { fg = c.accent },
             -- column where signs are displayed
-        IncSearch           = { fg = c.dark0, bg = c.yellow0 },
+        IncSearch           = { fg = c.dark0, bg = c.accent },
             -- 'incsearch' highlighting
         Substitute          = { link = "Search" },
             -- :substitute replacement text highlighting
@@ -70,7 +70,7 @@ function M.get(c)
             -- area for messages and command-line
         MsgSeparator        = { bg = c.dark0 },
             -- separator for scrolled messages
-        MoreMsg             = { fg = c.suggestion },
+        MoreMsg             = { fg = c.info },
             -- more-prompt
         NonText             = { link = "Unknown" },
             -- '@' at the end of the window, characters from showbreak and other characters that do not really exist in the text
@@ -101,7 +101,7 @@ function M.get(c)
             -- popup menu: selected itme 'extra text'
         PmenuSbar           = { bg = c.dark0 },
             -- popup menu: scrollbar
-        PmenuThumb          = { bg = c.yellow0 },
+        PmenuThumb          = { bg = c.accent },
             -- popup menu: thumb of scrollbar
         PmenuMatch          = { link = "Unknown" },
             -- popup menu: matched text in normal item
@@ -109,7 +109,7 @@ function M.get(c)
             -- popup menu: match text in selected item
         CompMatchIns        = { link = "Unknown" },
             -- matched text of the currently inserted completion
-        Question            = { fg = c.suggestion },
+        Question            = { fg = c.info },
             -- hit-enter prompt and yes/no questions
         QuickFixLine        = { fg = c.purple1 },
             -- current quickfix item in the quickfix window
@@ -121,9 +121,9 @@ function M.get(c)
             -- unprintable characters: text displayed differently from what it really is
         SpellBad            = { fg = c.error, underline = true },
             -- word that is not recognized by the spellchecker
-        SpellCap            = { fg = c.suggestion, underline = true },
+        SpellCap            = { fg = c.info, underline = true },
             -- word that should start with a capital
-        SpellLocal          = { fg = c.yellow1, underline = true },
+        SpellLocal          = { fg = c.warning, underline = true },
             -- word that is recognized by the spellchecker as one that is used in another region
         SpellRare           = { fg = c.critical, underline = true },
             -- word that is recognized by the spellchecker as one that is hardly every used
@@ -141,7 +141,7 @@ function M.get(c)
             -- tabe pages line, where there are no labels
         TabLineSel          = { bg = c.dark3 },
             -- tab pages line, active tabe page label
-        Title               = { bg = c.suggestion },
+        Title               = { bg = c.info },
             -- titles for output from ':set all', ':autocmd' etc.
         Visual              = { bg = c.highlight },
             -- visual mode selection

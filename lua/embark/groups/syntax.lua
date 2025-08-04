@@ -46,7 +46,7 @@ function M.get(c)
         Underlined          = { underline = true },
         Ignore              = { fg = c.bg },
         Error               = { fg = c.error },
-        Todo                = { fg = c.yellow0 },
+        Todo                = { fg = c.accent },
 
         Added               = { link = "DiffAdd" },
         Changed             = { link = "DiffChange" },

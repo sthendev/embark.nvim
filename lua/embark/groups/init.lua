@@ -3,6 +3,7 @@ local M = {}
 M.groups = {
     ["editor"] = true,
     ["syntax"] = true,
+    ["diagnostic"] = true,
 }
 
 M.plugins = {}
