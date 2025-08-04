@@ -22,11 +22,11 @@ function M.get(c)
             -- screen-line at the cursor when cursorline=true
         Directory           = { fg = c.yellow0 },
             -- directory names
-        DiffAdd             = { bg = Utils.darken(c.added, 0.15) },
+        DiffAdd             = { bg = Utils.blend(c.added, c.dark0, 0.5) },
             -- diff mode: added line
-        DiffChange          = { bg = Utils.darken(c.changed, 0.15) },
+        DiffChange          = { bg = Utils.blend(c.changed, c.dark0, 0.5) },
             -- diff mode: changed line
-        DiffDelete          = { bg = Utils.darken(c.deleted, 0.15) },
+        DiffDelete          = { bg = Utils.blend(c.deleted, c.dark0, 0.5) },
             -- diff mode: deleted line
         DiffText            = { bg = c.suggestion },
             -- diff mode: changed text within changed line
