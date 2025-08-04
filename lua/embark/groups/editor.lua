@@ -22,15 +22,15 @@ function M.get(c)
             -- screen-line at the cursor when cursorline=true
         Directory           = { fg = c.yellow0 },
             -- directory names
-        DiffAdd             = { bg = Utils.darken(c.green1, 0.15) },
+        DiffAdd             = { bg = Utils.darken(c.added, 0.15) },
             -- diff mode: added line
-        DiffChange          = { bg = Utils.darken(c.blue1, 0.15) },
+        DiffChange          = { bg = Utils.darken(c.changed, 0.15) },
             -- diff mode: changed line
-        DiffDelete          = { bg = Utils.darken(c.red1, 0.15) },
+        DiffDelete          = { bg = Utils.darken(c.deleted, 0.15) },
             -- diff mode: deleted line
-        DiffText            = { bg = c.blue1 },
+        DiffText            = { bg = c.suggestion },
             -- diff mode: changed text within changed line
-        EndOfBuffer         = { link = "LineAbove" },
+        EndOfBuffer         = { link = "LineNrBelow" },
             -- filler lines (~) after the last line in the buffer
         TermCursor          = { reverse = true },
             -- cursor in a focused terminal
@@ -40,9 +40,9 @@ function M.get(c)
             -- warning messages
         WinSeparator        = { fg = c.border },
             -- separators between window splits
-        Folded              = { fg = c.blue0, bg = c.highlight },
+        Folded              = { fg = c.suggestion, bg = c.highlight },
             -- line used for closed folds
-        FoldColumn          = { fg = c.blue0 },
+        FoldColumn          = { fg = c.suggestion },
             -- 'foldcolumn'
         SignColumn          = { fg = c.yellow0 },
             -- column where signs are displayed
@@ -70,7 +70,7 @@ function M.get(c)
             -- area for messages and command-line
         MsgSeparator        = { bg = c.dark0 },
             -- separator for scrolled messages
-        MoreMsg             = { fg = c.blue1 },
+        MoreMsg             = { fg = c.suggestion },
             -- more-prompt
         NonText             = { link = "Unknown" },
             -- '@' at the end of the window, characters from showbreak and other characters that do not really exist in the text
@@ -109,7 +109,7 @@ function M.get(c)
             -- popup menu: match text in selected item
         CompMatchIns        = { link = "Unknown" },
             -- matched text of the currently inserted completion
-        Question            = { fg = c.blue0 },
+        Question            = { fg = c.suggestion },
             -- hit-enter prompt and yes/no questions
         QuickFixLine        = { fg = c.purple1 },
             -- current quickfix item in the quickfix window
@@ -119,13 +119,13 @@ function M.get(c)
             -- tabstops in snippets
         SpecialKey          = { fg = c.cyan0 },
             -- unprintable characters: text displayed differently from what it really is
-        SpellBad            = { fg = c.red1, underline = true },
+        SpellBad            = { fg = c.error, underline = true },
             -- word that is not recognized by the spellchecker
-        SpellCap            = { fg = c.blue0, underline = true },
+        SpellCap            = { fg = c.suggestion, underline = true },
             -- word that should start with a capital
         SpellLocal          = { fg = c.yellow1, underline = true },
             -- word that is recognized by the spellchecker as one that is used in another region
-        SpellRare           = { fg = c.red0, underline = true },
+        SpellRare           = { fg = c.critical, underline = true },
             -- word that is recognized by the spellchecker as one that is hardly every used
         StatusLine          = { bg = c.dark0 },
             -- status line of the current window
@@ -141,7 +141,7 @@ function M.get(c)
             -- tabe pages line, where there are no labels
         TabLineSel          = { bg = c.dark3 },
             -- tab pages line, active tabe page label
-        Title               = { bg = c.blue0 },
+        Title               = { bg = c.suggestion },
             -- titles for output from ':set all', ':autocmd' etc.
         Visual              = { bg = c.highlight },
             -- visual mode selection

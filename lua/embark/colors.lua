@@ -34,8 +34,13 @@ M.ALIASES = {
     bg          = M.COLORS.dark1,
     error       = M.COLORS.red1,
     warning     = M.COLORS.yellow1,
+    critical    = M.COLORS.red0,
+    suggestion  = M.COLORS.blue0,
     border      = M.COLORS.dark3,
     highlight   = M.COLORS.dark3,
+    added       = M.COLORS.green1,
+    changed     = M.COLORS.blue1,
+    deleted     = M.COLORS.red1,
 }
 
 function M.setup()
