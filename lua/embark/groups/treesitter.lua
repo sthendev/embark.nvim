@@ -13,7 +13,7 @@ function M.get(c)
         ["@constant.builtin"]               = { link = "Tag" },
         ["@constant.macro"]                 = { link = "@constant" },
 
-        ["@module"]                         = { fg = c.cyan1 },
+        ["@module"]                         = { link = "Directory" },
         ["@module.builtin"]                 = { link = "Special" },
         ["@label"]                          = { link = "Statement" },
 

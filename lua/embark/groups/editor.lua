@@ -20,7 +20,7 @@ function M.get(c)
             -- screen-column at the cursor when cursorcolumn=true
         CursorLine          = { bg = c.highlight },
             -- screen-line at the cursor when cursorline=true
-        Directory           = { fg = c.yellow0 },
+        Directory           = { fg = c.purple1 },
             -- directory names
         DiffAdd             = { bg = Utils.blend(c.added, c.dark0, 0.7) },
             -- diff mode: added line
