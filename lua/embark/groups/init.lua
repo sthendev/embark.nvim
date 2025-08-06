@@ -4,6 +4,7 @@ M.groups = {
     ["editor"] = true,
     ["syntax"] = true,
     ["diagnostic"] = true,
+    ["treesitter"] = true,
 }
 
 M.plugins = {}
