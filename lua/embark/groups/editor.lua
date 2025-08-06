@@ -10,7 +10,7 @@ function M.get(c)
             -- custom placeholder for undecided highlights
         ColorColumn         = { bg = c.dark0 },
             -- used for columns set with colorcolumn
-        Conceal             = { link = "Unknown" },
+        Conceal             = { link = "Normal" },
             -- placeholder characters substituted for concealed text
         CurSearch           = { link = "IncSearch" },
             -- current match for last search pattern
@@ -50,9 +50,9 @@ function M.get(c)
             -- 'incsearch' highlighting
         Substitute          = { link = "Search" },
             -- :substitute replacement text highlighting
-        LineNr              = { fg = c.dark4, bold = true },
+        LineNr              = { fg = c.light0, bold = true },
             -- line number for :number, :# commands and for relativenumber=true
-        LineNrAbove         = { fg = c.dark3 },
+        LineNrAbove         = { fg = c.dark4 },
             -- line numbers above cursor line when relativenumber=true
         LineNrBelow         = { link = "LineNrAbove" },
             -- line numbers below curosr line for when relativenumber=true
@@ -72,7 +72,7 @@ function M.get(c)
             -- separator for scrolled messages
         MoreMsg             = { fg = c.info },
             -- more-prompt
-        NonText             = { link = "Unknown" },
+        NonText             = { fg = c.dark4 },
             -- '@' at the end of the window, characters from showbreak and other characters that do not really exist in the text
             -- (e.g. '>' displayed when a double-wide character doesn't fit at the end of the line)
         Normal              = { fg = c.light1, bg = c.dark1 },
@@ -141,7 +141,7 @@ function M.get(c)
             -- tabe pages line, where there are no labels
         TabLineSel          = { bg = c.dark3 },
             -- tab pages line, active tabe page label
-        Title               = { bg = c.info },
+        Title               = { fg = c.info },
             -- titles for output from ':set all', ':autocmd' etc.
         Visual              = { bg = c.highlight },
             -- visual mode selection
