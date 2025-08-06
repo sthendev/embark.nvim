@@ -14,7 +14,7 @@ function M.get(c)
         Boolean             = { fg = c.yellow0 },
         Float               = { link = "Number" },
 
-        Identifier          = { fg = c.cyan1 },
+        Identifier          = { link = "Normal" },
         Function            = { fg = c.red1 },
 
         Statement           = { fg = c.green1 },

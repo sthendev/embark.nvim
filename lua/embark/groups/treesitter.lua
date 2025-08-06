@@ -5,15 +5,15 @@ function M.get(c)
     ---@type Highlights
     return {
         ["@variable"]                       = { link = "Normal" },
-        ["@variable.builtin"]               = { link = "Special" },
+        ["@variable.builtin"]               = { link = "Tag" },
         ["@variable.parameter"]             = { link = "@variable" },
         ["@variable.parameter.builtin"]     = { link = "@variable" },
 
         ["@constant"]                       = { link = "Constant" },
-        ["@constant.builtin"]               = { link = "Special" },
+        ["@constant.builtin"]               = { link = "Tag" },
         ["@constant.macro"]                 = { link = "@constant" },
 
-        ["@module"]                         = { link = "Directory" },
+        ["@module"]                         = { fg = c.cyan1 },
         ["@module.builtin"]                 = { link = "Special" },
         ["@label"]                          = { link = "Statement" },
 
@@ -38,12 +38,12 @@ function M.get(c)
         ["@type.definition"]                = { link = "@type" },
 
         ["@attribute"]                      = { link = "Statement"},
-        ["@atribute.builtin"]               = { link = "Special"},
+        ["@attribute.builtin"]              = { link = "Statement"},
         ["@property"]                       = { link = "Identifier"},
 
         ["@function"]                       = { link = "Function" },
-        ["@function.builtin"]               = { link = "Special" },
-        ["@function.call"]                  = { link = "@function" },
+        ["@function.builtin"]               = { link = "Tag" },
+        ["@function.call"]                  = { link = "Special" },
         ["@function.macro"]                 = { link = "Statement" },
         ["@function.method"]                = { link = "@function" },
         ["@function.method.call"]           = { link = "@function" },
@@ -54,7 +54,7 @@ function M.get(c)
         ["@keyword"]                        = { link = "Statement" },
         ["@keyword.coroutine"]              = { link = "Statement" },
         ["@keyword.function"]               = { link = "Statement" },
-        ["@keyword.operator"]               = { link = "Operator" },
+        ["@keyword.operator"]               = { link = "Statement" },
         ["@keyword.import"]                 = { link = "Statement" },
         ["@keyword.type"]                   = { link = "Statement" },
         ["@keyword.modifier"]               = { link = "Statement" },
