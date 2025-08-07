@@ -46,7 +46,7 @@ function M.get(c)
         ["@function.call"]                  = { link = "Special" },
         ["@function.macro"]                 = { link = "Statement" },
         ["@function.method"]                = { link = "@function" },
-        ["@function.method.call"]           = { link = "@function" },
+        ["@function.method.call"]           = { link = "@function.call" },
 
         ["@constructor"]                    = { link = "Constant"},
         ["@operator"]                       = { link = "Operator" },
