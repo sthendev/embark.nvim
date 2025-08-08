@@ -42,9 +42,12 @@ M.ALIASES = {
     border      = M.COLORS.dark3,
     highlight   = M.COLORS.dark3,
     accent      = M.COLORS.yellow0,
-    added       = M.COLORS.green0,
-    changed     = M.COLORS.blue0,
-    deleted     = M.COLORS.red0,
+    added       = M.COLORS.green1,
+    changed     = M.COLORS.yellow1,
+    deleted     = M.COLORS.red1,
+    addedbg     = M.COLORS.green0,
+    changedbg   = M.COLORS.blue0,
+    deletedbg   = M.COLORS.red0,
 }
 
 function M.setup()

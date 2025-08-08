@@ -16,11 +16,16 @@ function M.get(c)
                         ["function.call"] = "EmbarkLspFunctionCall",
                         ["function.method.call"] = "EmbarkLspFunctionCall",
                     }
+                },
+                ["variable"] = {
+                    captures = {
+                        ["constant"] = "EmbarkLspConstant",
+                    }
                 }
             }
 
             local overrides = mappings[args.data.token.type]
-            if overrides ~= nil then
+            if overrides then
                 local buf = args.buf
                 local token = args.data.token
                 local captures = vim.treesitter.get_captures_at_pos(
@@ -29,7 +34,7 @@ function M.get(c)
 
                 for _, i in ipairs(captures) do
                     local override = overrides.captures[i.capture]
-                    if override ~= nil then
+                    if override then
                         vim.lsp.semantic_tokens.highlight_token(
                             token, buf, args.data.client_id, override
                         )
@@ -42,7 +47,8 @@ function M.get(c)
 
     ---@type Highlights
     return {
-        ["EmbarkLspFunctionCall"]          = { link = "@function.call" },
+        EmbarkLspFunctionCall           = { link = "@function.call" },
+        EmbarkLspConstant               = { link = "@constant" },
     }
 end
 

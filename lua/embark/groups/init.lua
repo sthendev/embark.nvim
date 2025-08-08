@@ -8,7 +8,9 @@ M.groups = {
     ["lsp"] = true,
 }
 
-M.plugins = {}
+M.plugins = {
+    ["gitsigns.nvim"]           = "gitsigns",
+}
 
 function M.get(name, colors)
     return require("embark.groups." .. name).get(colors)
@@ -25,6 +27,13 @@ function M.setup(colors)
     end
 
     local output = {}
+
+    local installed = require("lazy.core.config").plugins
+    for plugin, group in pairs(M.plugins) do
+        if installed[plugin] then
+            M.groups[group] = true
+        end
+    end
 
     for group in pairs(M.groups) do
         for k, v in pairs(M.get(group, colors)) do
