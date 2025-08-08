@@ -7,12 +7,15 @@ function M.get(c)
         callback = function(args)
             local mappings = {
                 ["function"] = {
-                    capture = "function.call",
-                    override = "EmbarkLspFunctionCall"
+                    captures = {
+                        ["function.call"] = "EmbarkLspFunctionCall",
+                    }
                 },
                 ["method"] = {
-                    capture = "function.method.call",
-                    override = "EmbarkLspFunctionCall"
+                    captures = {
+                        ["function.call"] = "EmbarkLspFunctionCall",
+                        ["function.method.call"] = "EmbarkLspFunctionCall",
+                    }
                 }
             }
 
@@ -25,9 +28,10 @@ function M.get(c)
                 )
 
                 for _, i in ipairs(captures) do
-                    if i.capture == data.capture then
+                    local override = data.captures[i.capture]
+                    if override ~= nil then
                         vim.lsp.semantic_tokens.highlight_token(
-                            token, buf, args.data.client_id, data.override
+                            token, buf, args.data.client_id, override
                         )
                         break
                     end
