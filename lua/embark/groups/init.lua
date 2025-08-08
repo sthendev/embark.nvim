@@ -5,6 +5,7 @@ M.groups = {
     ["syntax"] = true,
     ["diagnostic"] = true,
     ["treesitter"] = true,
+    ["lsp"] = true,
 }
 
 M.plugins = {}
