@@ -10,6 +10,7 @@ M.groups = {
 
 M.plugins = {
     ["gitsigns.nvim"]           = "gitsigns",
+    ["nvim-treesitter-context"] = "tscontext",
 }
 
 function M.get(name, colors)
