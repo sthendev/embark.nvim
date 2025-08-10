@@ -38,7 +38,7 @@ function M.get(c)
             -- error messages on the command line
         WarningMsg          = { fg = c.warning },
             -- warning messages
-        WinSeparator        = { fg = c.border },
+        WinSeparator        = { fg = c.dark4, bold = true },
             -- separators between window splits
         Folded              = { fg = c.info, bg = c.highlight },
             -- line used for closed folds
@@ -77,17 +77,17 @@ function M.get(c)
             -- (e.g. '>' displayed when a double-wide character doesn't fit at the end of the line)
         Normal              = { fg = c.light1, bg = c.dark1 },
             -- normal text
-        NormalFloat         = { bg = c.highlight },
+        NormalFloat         = { link = "Normal" },
             -- normal text in floating windows
         FloatBorder         = { fg = c.border },
             -- border of floating windows
-        FloatTitle          = { link = "Normal" },
+        FloatTitle          = { link = "NormalFloat" },
             -- title of floating windows
-        FloatFooter         = { link = "Normal" },
+        FloatFooter         = { link = "NormalFloat" },
             -- footer of floating windows
         NormalNC            = { link = "Normal" },
             -- normal text in non-current windows
-        Pmenu               = { link = "NormalFloat" },
+        Pmenu               = { bg = c.highlight },
             -- popup menu: normal item
         PmenuSel            = { fg = c.purple1, bg = c.dark0 },
             -- popup menu: selected item

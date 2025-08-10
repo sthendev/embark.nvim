@@ -4,12 +4,12 @@ local M = {}
 function M.get(c)
     ---@type Highlights
     return {
-        TelescopeNormal             = { fg = c.fg, bg = c.bg },
-        TelescopeSelection          = { bg = c.highlight },
-        TelescopeBorder             = { fg = c.light0 },
+        TelescopeNormal             = { link = "NormalFloat" },
+        TelescopeSelection          = { link = "Visual" },
+        TelescopeBorder             = { link = "FloatBorder" },
         TelescopePromptCounter      = { fg = c.light0 },
         TelescopeMatching           = { fg = c.purple1 },
-        TelescopePromptPrefix       = { fg = c.light0 },
+        TelescopePromptPrefix       = { fg = c.purple1 },
     }
 end
 
