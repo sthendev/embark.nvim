@@ -1,2 +1,4 @@
 ---@alias Highlights { [string]: vim.api.keyset.highlight }
 ---@alias HighlightsFn fun(c: ColorPalette): Highlights
+---@alias LualineTheme { [string]: Highlights[] }
+---@alias LualineThemeFn fun(c: ColorPalette): LualineTheme
