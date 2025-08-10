@@ -10,6 +10,7 @@ M.groups = {
 
 M.plugins = {
     ["gitsigns.nvim"]           = "gitsigns",
+    ["neogit"]                  = "neogit",
     ["nvim-treesitter-context"] = "tscontext",
     ["telescope.nvim"]          = "telescope",
 }

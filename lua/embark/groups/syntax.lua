@@ -37,7 +37,7 @@ function M.get(c)
         Typedef             = { link = "Keyword" },
 
         Special             = { fg = c.blue1 },
-        SpecialChar         = { fg = c.green0 },
+        SpecialChar         = { fg = c.cyan1 },
         Tag                 = { fg = c.cyan1 },
         Delimiter           = { link = "Normal" },
         SpecialComment      = { link = "Statement" },

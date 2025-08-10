@@ -6,7 +6,7 @@ local M = {}
 function M.get(c)
     ---@type Highlights
     return {
-        Unknown             = { fg = c.red0, bg = c.red1 },
+        Unknown             = { fg = c.red0, bg = c.red1, bold = true, underline = true },
             -- custom placeholder for undecided highlights
         ColorColumn         = { bg = c.dark0 },
             -- used for columns set with colorcolumn
