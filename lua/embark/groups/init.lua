@@ -9,6 +9,7 @@ M.groups = {
 }
 
 M.plugins = {
+    ["avante.nvim"]             = "avante",
     ["gitsigns.nvim"]           = "gitsigns",
     ["neogit"]                  = "neogit",
     ["nvim-dap-ui"]             = "dapui",
