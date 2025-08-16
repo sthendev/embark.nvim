@@ -39,11 +39,10 @@ function M.get(c)
         AvanteTaskCompleted                 = { fg = c.green1 },
         AvanteTaskFailed                    = { fg = c.red1 },
         AvanteThinking                      = { fg = c.info },
-        -- TODO: conflict resolution highlights
-        -- AvanteConflictCurrent
-        -- AvanteConflictCurrentLabel
-        -- AvanteConlictIncoming
-        -- AvanteConflictIncomingLabel
+        AvanteConflictCurrent               = { link = "DiffText" },
+        AvanteConflictCurrentLabel          = { link = "AvanteConflictCurrent" },
+        AvanteConlictIncoming               = { link = "DiffAdd" },
+        AvanteConflictIncomingLabel         = { link = "AvanteConflictIncoming" },
     }
 end
 
