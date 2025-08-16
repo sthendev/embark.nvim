@@ -1,4 +1,4 @@
-# $\huge{\color{#F48FB1}\textsf{E}\color{#A1EFD3}\textsf{M}\color{#FFE6B3}\textsf{B}\color{#91DDFF}\textsf{A}\color{#D4BFFF}\textsf{R}\color{#ABF8F7}\textsf{K}\color{#FFFFFF}\textsf{.NVIM}}$
+# $\Huge{\color{#F48FB1}\textsf{E}\color{#A1EFD3}\textsf{M}\color{#FFE6B3}\textsf{B}\color{#91DDFF}\textsf{A}\color{#D4BFFF}\textsf{R}\color{#ABF8F7}\textsf{K}}\Huge{\textsf{.nvim}}$
 This is my lua port of [embark.vim](https://github.com/embark-theme/vim). Highlights are not 100% identical to the original but attempted to maintain the spirit of the theme. It will be missing support for plugins that I don't use but contributions are welcome.
 
 ## Screenshot:
