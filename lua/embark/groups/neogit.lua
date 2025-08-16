@@ -10,7 +10,7 @@ function M.get(c)
         NeogitObjectId              = { fg = c.light0 },
         NeogitStash                 = { link = "Unknown" },
         NeogitFold                  = { bg = c.highlight },
-        NeogitRebaseDone            = { link = "Unknown" },
+        NeogitRebaseDone            = { fg = c.green1 },
         NeogitTagName               = { link = "Unknown" },
         NeogitTagDistance           = { link = "Unknown" },
         NeogitStatusHEAD            = { fg = c.cyan1 },

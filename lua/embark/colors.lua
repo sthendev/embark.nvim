@@ -1,3 +1,5 @@
+local Utils = require("embark.utils")
+
 local M = {}
 
 ---@class BaseColors
@@ -42,12 +44,24 @@ M.ALIASES = {
     border      = M.COLORS.light0,
     highlight   = M.COLORS.dark3,
     accent      = M.COLORS.yellow0,
-    added       = M.COLORS.green1,
-    changed     = M.COLORS.yellow1,
-    deleted     = M.COLORS.red1,
-    addedbg     = M.COLORS.green0,
-    changedbg   = M.COLORS.blue0,
-    deletedbg   = M.COLORS.red0,
+    diff = {
+        added = {
+            fg = M.COLORS.green1,
+            bg = Utils.blend(M.COLORS.green0, M.COLORS.dark0, 0.8)
+        },
+        changed = {
+            fg = M.COLORS.yellow1,
+            bg = Utils.blend(M.COLORS.yellow0, M.COLORS.dark0, 0.8)
+        },
+        deleted = {
+            fg = M.COLORS.red1,
+            bg = Utils.blend(M.COLORS.red0, M.COLORS.dark0, 0.8)
+        },
+        text = {
+            fg = M.COLORS.blue1,
+            bg = Utils.blend(M.COLORS.blue0, M.COLORS.dark0, 0.8)
+        }
+    }
 }
 
 function M.setup()

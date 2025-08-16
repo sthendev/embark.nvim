@@ -1,5 +1,3 @@
-local Utils = require("embark.utils")
-
 local M = {}
 
 ---@type HighlightsFn
@@ -22,13 +20,13 @@ function M.get(c)
             -- screen-line at the cursor when cursorline=true
         Directory           = { fg = c.purple1 },
             -- directory names
-        DiffAdd             = { bg = Utils.blend(c.addedbg, c.dark0, 0.7) },
+        DiffAdd             = { bg = c.diff.added.bg },
             -- diff mode: added line
-        DiffChange          = { bg = Utils.blend(c.changedbg, c.dark0, 0.7) },
+        DiffChange          = { bg = c.diff.changed.bg },
             -- diff mode: changed line
-        DiffDelete          = { bg = Utils.blend(c.deletedbg, c.dark0, 0.7) },
+        DiffDelete          = { bg = c.diff.deleted.bg },
             -- diff mode: deleted line
-        DiffText            = { bg = c.info },
+        DiffText            = { bg = c.diff.text.bg },
             -- diff mode: changed text within changed line
         EndOfBuffer         = { link = "LineNrBelow" },
             -- filler lines (~) after the last line in the buffer
