@@ -1,5 +1,5 @@
 # EMBARK.NVIM
-This is my lua port of [embark.vim|https://github.com/embark-theme/vim]. Highlights are not 100% identical to the original but attempted to maintain the spirit of the theme. It will be missing support for plugins that I don't use but contributions are welcome.
+This is my lua port of [embark.vim](https://github.com/embark-theme/vim). Highlights are not 100% identical to the original but attempted to maintain the spirit of the theme. It will be missing support for plugins that I don't use but contributions are welcome.
 
 ## Supported Plugins
 - avante.nvim
@@ -28,5 +28,5 @@ This is my lua port of [embark.vim|https://github.com/embark-theme/vim]. Highlig
 Adding support for new plugins is straightforward. Simply add a new lua file for the plugin in `lua/embark/groups/` and add a mapping from plugin name to file name in `lua/embark/groups/init.lua`.
 
 ## Acknowledgements
-- [embark.vim|https://github.com/embark-theme/vim]: The original colorscheme I have used and loved for years.
-- [tokyonight.nvim|https://github.com/folke/tokyonight.nvim]: Heavily inspired the code structure for this project.
+- [embark.vim](https://github.com/embark-theme/vim): The original colorscheme I have used and loved for years.
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim): Heavily inspired the code structure for this project.
