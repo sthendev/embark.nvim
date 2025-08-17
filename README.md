@@ -8,6 +8,7 @@ This is my lua port of [embark.vim](https://github.com/embark-theme/vim). Highli
 - treesitter
 - lsp
 - avante.nvim
+- blink.cmp
 - gitsigns.nvim
 - neogit
 - nvim-dap-ui

@@ -2,7 +2,7 @@ local M = {}
 
 ---@type HighlightsFn
 function M.get(c)
-    -- overriding lsp semantic highlights
+    -- overriding lsp semantic highlights based on treesitter captures
     vim.api.nvim_create_autocmd("LspTokenUpdate", {
         callback = function(args)
             local mappings = {

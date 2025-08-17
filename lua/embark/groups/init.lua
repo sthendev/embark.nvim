@@ -6,10 +6,12 @@ M.groups = {
     ["diagnostic"] = true,
     ["treesitter"] = true,
     ["lsp"] = true,
+    ["kinds"] = true,
 }
 
 M.plugins = {
     ["avante.nvim"]             = "avante",
+    ["blink.cmp"]               = "blink",
     ["gitsigns.nvim"]           = "gitsigns",
     ["neogit"]                  = "neogit",
     ["nvim-dap-ui"]             = "dapui",

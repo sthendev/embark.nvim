@@ -92,7 +92,7 @@ function M.get(c)
         ["@markup.raw.block"]               = { link = "@markup.raw" },
         ["@markup.list"]                    = { link = "Constant" },
         ["@markup.list.checked"]            = { fg = c.good },
-        ["@markup.link.unchecked"]          = { fg = c.changed },
+        ["@markup.link.unchecked"]          = { fg = c.warning },
 
         ["@diff.plus"]                      = { link = "DiffAdd" },
         ["@diff.minus"]                     = { link = "DiffDelete" },
