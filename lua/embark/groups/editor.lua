@@ -73,7 +73,7 @@ function M.get(c)
         NonText             = { fg = c.dark4 },
             -- '@' at the end of the window, characters from showbreak and other characters that do not really exist in the text
             -- (e.g. '>' displayed when a double-wide character doesn't fit at the end of the line)
-        Normal              = { fg = c.light1, bg = c.dark1 },
+        Normal              = { fg = c.fg, bg = c.bg },
             -- normal text
         NormalFloat         = { link = "Normal" },
             -- normal text in floating windows

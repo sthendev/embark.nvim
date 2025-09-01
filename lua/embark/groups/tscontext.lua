@@ -4,7 +4,7 @@ local M = {}
 function M.get(c)
     ---@type Highlights
     return {
-        TreesitterContext           = { bg = c.dark0 },
+        TreesitterContext           = { link = "Visual" },
     }
 end
 

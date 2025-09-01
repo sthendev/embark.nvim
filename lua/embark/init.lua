@@ -13,6 +13,10 @@ function M.load(_)
     vim.g.colors_name = "embark"
 
     for group, hl in pairs(groups) do
+        if hl["link"] == "Normal" then
+            -- fix background highlight in treesitter-context
+            hl = { fg = colors.fg, bg = "none" }
+        end
         vim.api.nvim_set_hl(0, group, hl)
     end
 end
