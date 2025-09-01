@@ -47,6 +47,8 @@ function M.get(c)
 
     ---@type Highlights
     return {
+        ["@lsp.type.modifier"]          = { link = "@keyword.modifier" },
+
         EmbarkLspFunctionCall           = { link = "@function.call" },
         EmbarkLspConstant               = { link = "@constant" },
     }
